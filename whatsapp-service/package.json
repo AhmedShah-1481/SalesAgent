@@ -1,0 +1,22 @@
+{
+  "name": "whatsapp-service",
+  "version": "0.1.0",
+  "description": "Isolated WhatsApp microservice (Baileys + Express) for the AgentHack sales agent. Talks to the Python backend only over plain HTTP.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "^6.7.0",
+    "axios": "^1.7.0",
+    "dotenv": "^16.4.0",
+    "express": "^4.19.0",
+    "pino": "^9.0.0",
+    "qrcode-terminal": "^0.12.0"
+  }
+}

@@ -1,0 +1,43 @@
+# ── Python ────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# ── Backend runtime data (Chroma store, SQLite checkpoints, uploads) ──
+backend/data/
+*.sqlite
+*.sqlite3
+
+# ── Node ──────────────────────────────────────────────────
+node_modules/
+frontend/.next/
+frontend/out/
+frontend/next-env.d.ts
+frontend/.turbo/
+
+# ── Baileys WhatsApp session — MUST NOT be committed ──────
+whatsapp-service/auth/
+!whatsapp-service/auth/.gitkeep
+
+# ── Env / secrets ─────────────────────────────────────────
+.env
+.env.*
+!.env.example
+!.env.local.example
+*.local
+credentials*.json
+token*.json
+client_secret*.json
+
+# ── OS / editor / misc ────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.log
+coverage/
+.vscode/
+.idea/

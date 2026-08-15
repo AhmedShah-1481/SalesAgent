@@ -1,0 +1,13 @@
+# Heavy ML / RAG dependencies — required for the RAG features (company knowledge §1 and
+# RAG-grounded service matching §6). Not needed just to boot the API (ML imports are lazy).
+#   pip install -r requirements-ml.txt
+#
+# On Windows, `pip install torch` pulls the CPU build from PyPI by default (no CUDA needed).
+# `playwright` is included only as an optional upgrade path for JS-heavy page scraping; the
+# current deep-research scraper uses a plain httpx fetch, so no `playwright install` is required.
+
+torch                      # CPU build; backs sentence-transformers embeddings
+sentence-transformers      # all-MiniLM-L6-v2 local embeddings (free, no API cost)
+chromadb                   # local vector store (pulls onnxruntime transitively)
+langchain-chroma           # LangChain <-> Chroma integration
+playwright                 # company website scraping (team/about pages)

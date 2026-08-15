@@ -1,0 +1,33 @@
+[project]
+name = "agenthack-sales-agent-backend"
+version = "0.1.0"
+description = "Autonomous AI Sales Agent — FastAPI + LangGraph backend"
+requires-python = ">=3.12"
+
+[tool.pytest.ini_options]
+# Lets `import app...` resolve when running pytest from the backend/ dir.
+pythonpath = ["."]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+# The codebase standardizes on `timezone.utc` (not the py3.11 `datetime.UTC` alias).
+ignore = ["UP017"]
+
+[tool.ruff.lint.flake8-bugbear]
+# FastAPI dependency-injection defaults (File/Depends/Query/...) are the intended idiom,
+# not the mutable-default bug B008 guards against.
+extend-immutable-calls = [
+    "fastapi.File",
+    "fastapi.Depends",
+    "fastapi.Query",
+    "fastapi.Path",
+    "fastapi.Body",
+    "fastapi.Form",
+    "fastapi.Header",
+]

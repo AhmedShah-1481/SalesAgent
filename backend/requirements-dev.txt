@@ -1,0 +1,6 @@
+# Developer tooling — tests + linting.
+#   pip install -r requirements-dev.txt
+
+pytest
+pytest-asyncio
+ruff

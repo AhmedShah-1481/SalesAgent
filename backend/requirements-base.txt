@@ -1,0 +1,47 @@
+# Base backend dependencies — enough to BOOT the FastAPI app + LangGraph graph.
+# Deliberately excludes torch / chromadb / sentence-transformers (see requirements-ml.txt),
+# so `uvicorn app.main:app` starts in seconds on a fresh venv. RAG-heavy imports are lazy.
+#
+# Left unpinned here for readability; requirements.lock.txt holds the exact
+# known-good pins (generated via `pip freeze` after the first successful install).
+
+# Web framework
+fastapi
+uvicorn[standard]
+python-multipart
+sse-starlette
+
+# Config / validation
+pydantic
+pydantic-settings
+python-dotenv
+email-validator
+
+# HTTP client (calls out to Tavily / Serper / WhatsApp Node service)
+httpx
+
+# Orchestration + LLM toolkit
+langgraph
+langgraph-checkpoint-sqlite
+langchain
+langchain-core
+langchain-community
+langchain-groq
+langchain-google-genai
+
+# Search
+tavily-python
+
+# Google APIs (Gmail send + Calendar/Meet)
+google-api-python-client
+google-auth-oauthlib
+google-auth-httplib2
+
+# Long-term memory
+supabase
+
+# Scheduling (follow-ups + meeting reminders)
+apscheduler
+
+# PDF parsing (light; used by the RAG loader, imported lazily)
+pymupdf
