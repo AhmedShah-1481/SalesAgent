@@ -1,6 +1,6 @@
-# AgentHack — Autonomous AI Sales Agent — Requirements
+# Autonomous AI Sales Agent — Requirements
 
-Source: AgentHack_Autonomous_AI_Sales_Agent_Challenge.pdf
+
 This is the authoritative functional spec. Cross-check the build against this file before final submission.
 
 ## Core Flow
@@ -124,18 +124,7 @@ Plus negative states: Not Qualified, Not Interested, Do Not Contact.
 - [ ] Memory: short-term + long-term
 - [ ] Pipeline: persist and update lead state through full lifecycle
 
-## Extra Credit (Section 18)
+## Extra (Section 18)
 - New meeting link generated when sending the email.
 - WhatsApp integration: message the company's WhatsApp number if available.
 - Admin reminder also sent via WhatsApp with meeting link.
-
-## Evaluation Weighting
-- Required features working perfectly: 70%
-- Extra features: 15%
-- Frontend: 15%
-- Overall: Video Presentation 60% / Code 40%
-
-## Submission Requirements
-1. Live Demo Video — max 1.5 minutes, working end-to-end workflow.
-2. Code Explanation Video — max 1 minute, architecture/agents/RAG/memory/tools.
-3. GitHub Repo — must include `.env.example`.
