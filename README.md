@@ -6,7 +6,7 @@ from a PDF, builds an ideal-customer profile, discovers and researches prospects
 with an explainable score, matches the right service, finds decision-makers, sends personalized
 outreach over email and WhatsApp, classifies replies, follows up automatically, and books meetings.
 
-Built for the **AgentHack "Autonomous AI Sales Agent"** challenge.
+
 
 > **Status: complete.** All challenge features are built and working: company knowledge/RAG (§1),
 > ICP intake (§2), staged lead discovery (§3), per-lead deep research (§4), confidence-scored
